@@ -1,0 +1,78 @@
+:root {
+  --primary-color: #1f3e76;
+  --home-get-start-btn: #0f2137;
+  --white-color: white;
+  --green-color: #25cb9e;
+  --features-heading: #244886;
+  --features-desc: #343d48;
+  --features-heading2: #0f2137;
+}
+
+* {
+  box-sizing: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: DM Sans;
+  src: url("../../assets/fonts/dm-sans-latin-700.659104546f390e057efeda29343c29b1.woff2");
+  font-weight: 700;
+}
+@font-face {
+  font-family: DM Sans;
+  src: url("../../assets/fonts/dm-sans-latin-500.b50824fe4ff335be8c64463129658220.woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: DM Sans;
+  src: url("../../assets/fonts/dm-sans-latin-400.9566aaac2083dccdc16ea3f2f2135e59.woff2");
+  font-weight: 400;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  line-height: 1.8;
+  font-family: "DM Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  z-index: -10;
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.container-fluid {
+  max-width: 100%;
+}

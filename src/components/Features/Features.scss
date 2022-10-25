@@ -1,0 +1,118 @@
+.features {
+  &-quality {
+    padding: 120px 0;
+  }
+  &-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 75px 0;
+    & p {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--features-heading);
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+    & h2 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 0;
+    padding: 0 80px;
+    &-item {
+      padding: 0 40px;
+    }
+    &-item-img {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto;
+    }
+  }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-desc {
+      text-align: center;
+      line-height: 2;
+      font-weight: 400;
+      font-size: 1.5rem;
+      color: var(--features-desc);
+    }
+  }
+  &-content-title {
+    font-size: 2rem;
+    margin: 0 0 15px 0;
+    line-height: 1.4;
+    font-weight: 700;
+  }
+
+  &-core {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    &-left {
+      width: 50%;
+      padding: 0 95px;
+    }
+    &-right {
+      width: 50%;
+      padding: 0 80px 0 0;
+    }
+    &-heading {
+      padding: 0 0 0 55px;
+      margin-bottom: 5px;
+    }
+    &-heading p {
+      margin: 0 0 15px 0;
+      font-size: 1.4rem;
+      font-weight: 700;
+      line-height: 1.5;
+      color: var(--features-heading);
+      letter-spacing: 2px;
+    }
+    &-heading h2 {
+      font-size: 4.2rem;
+      line-height: 1.2;
+      font-weight: 700;
+      margin-bottom: 25px;
+      color: var(--features-heading2);
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      padding: 0 40px 40px;
+    }
+    &-item {
+      display: flex;
+      justify-content: center;
+      padding: 20px 15px 17px;
+      &-title {
+        font-size: 1.8rem;
+        color: var(--features-heading2);
+        font-weight: 700;
+        line-height: 1.4;
+        margin-bottom: 15px;
+      }
+      &-desc {
+        line-height: 2;
+        font-size: 1.5rem;
+        font-weight: 400;
+
+        color: var(--features-desc);
+      }
+      &-img {
+        width: 55px;
+        height: 55px;
+        margin-right: 20px;
+      }
+    }
+  }
+}
