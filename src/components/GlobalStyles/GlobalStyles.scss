@@ -6,6 +6,10 @@
   --features-heading: #244886;
   --features-desc: #343d48;
   --features-heading2: #0f2137;
+  --function-number: #234582;
+  --payment-desc: #02073e;
+  --payment-item-bg: #2f5392;
+  --orange-color: #ef9e48;
 }
 
 * {
@@ -55,8 +59,8 @@ html {
 
 img {
   display: block;
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
   object-fit: cover;
 }
 

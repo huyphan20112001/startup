@@ -1,7 +1,32 @@
 import "./Header.scss";
-import React from "react";
+import React, { useState } from "react";
 
 function Header() {
+  const [active, setActive] = useState(1);
+
+  const menuItems = [
+    {
+      id: 1,
+      name: "Home",
+      link: "#home",
+    },
+    {
+      id: 2,
+      name: "Features",
+      link: "#features",
+    },
+    {
+      id: 3,
+      name: "Testinomial",
+      link: "#testinomial",
+    },
+    {
+      id: 4,
+      name: "Pricing",
+      link: "#pricing",
+    },
+  ];
+
   return (
     <header className="header" id="header">
       <div className="header-logo">
@@ -14,18 +39,16 @@ function Header() {
         ></img>
       </div>
       <nav className="menu-list">
-        <a href="#home" className="menu-list-item active">
-          Home
-        </a>
-        <a href="#features" className="menu-list-item">
-          Features
-        </a>
-        <a href="#testimonial" className="menu-list-item">
-          Testimonial
-        </a>
-        <a href="#pricing" className="menu-list-item">
-          Pricing
-        </a>
+        {menuItems.map((item) => (
+          <a
+            key={item.id}
+            onClick={() => setActive(item.id)}
+            href={item.link}
+            className={`menu-list-item ${active === item.id ? "active" : ""}`}
+          >
+            {item.name}
+          </a>
+        ))}
       </nav>
       <button className="btn-get-start">Get Started</button>
     </header>
