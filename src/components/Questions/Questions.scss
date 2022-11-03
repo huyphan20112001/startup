@@ -1,8 +1,10 @@
 .questions {
   padding: 120px 0;
   &-list {
-    width: 745px;
+    max-width: 745px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
   }
   &-item-heading {
     cursor: pointer;
@@ -142,4 +144,6 @@
   100% {
     height: 0;
   }
+}
+@media screen and (max-width: 850px) {
 }

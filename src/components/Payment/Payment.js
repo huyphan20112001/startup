@@ -53,6 +53,10 @@ const packages = [
 // const { allowed } = abc[0];
 // console.log(allowed);
 
+const handleClick = () => {
+  alert("clicked!");
+};
+
 function Payment() {
   // allowed.map((item) => console.log(item));
 
@@ -82,7 +86,9 @@ function Payment() {
                 sample.
               </p>
             </div>
-            <button className="payment-btn">Learn More</button>
+            <button className="payment-btn" onClick={handleClick}>
+              Learn More
+            </button>
           </div>
         </div>
       </div>
@@ -157,6 +163,7 @@ function Payment() {
                 </div>
                 <div className="payment-wrapper-btn">
                   <button
+                    onClick={handleClick}
                     className={
                       itemPackage.recommended
                         ? "payment-btn-sign-dark"

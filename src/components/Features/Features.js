@@ -88,6 +88,10 @@ const functions = [
   },
 ];
 
+const handleClick = () => {
+  alert("clicked!");
+};
+
 function Features() {
   return (
     <div className="features" id="features">
@@ -177,8 +181,6 @@ function Features() {
                 <img
                   src={item.src}
                   alt="default alt text"
-                  width="80"
-                  height="80"
                   className="features-exciting-item-img"
                 />
                 <div className="features-exciting-item-content">
@@ -201,7 +203,10 @@ function Features() {
               guidelines ever. Get your tests delivered at let home collect
               sample.
             </div>
-            <button className="btn-primary btn-get-start-dark">
+            <button
+              className="btn-primary btn-get-start-dark"
+              onClick={handleClick}
+            >
               Get Started
             </button>
           </div>

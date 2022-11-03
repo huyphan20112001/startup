@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react";
 
 function Testimonial() {
   const slider = useRef();
+  const itemSlider = useRef();
 
   const dataTesti = [
     {
@@ -106,15 +107,34 @@ function Testimonial() {
     },
   ];
 
+  let count = 0;
   const handleNext = () => {
-    // console.log(slider.current);
-    // slider.current.style.transform = "translateX(-1180px)";
-    // slider.current.style.backgroundColor = "red";
+    const widtScroll = slider.current.offsetWidth;
+    // const quantityItem =
+    // console.log((itemSlider.current.style.width = "100px"));
+    const items = [...document.querySelectorAll(".testi-slider-item")];
+    const widthItem = items[0].offsetWidth;
+    const quantityScroll = Math.round(widtScroll / widthItem);
+    const widthSlider = items.length * widthItem;
+    console.log(widthSlider);
+    count += widthItem * quantityScroll;
+    if (count > widthSlider - widthItem * quantityScroll) {
+      count = 0;
+    }
+    slider.current.style.transform = `translateX(${-count}px)`;
   };
 
   const handlePrev = () => {
-    // console.log(slider);
-    // slider.current.style.transform = "translateX(1180px)";
+    const widtScroll = slider.current.offsetWidth;
+    const items = [...document.querySelectorAll(".testi-slider-item")];
+    const widthItem = items[0].offsetWidth;
+    const quantityScroll = Math.round(widtScroll / widthItem);
+    const widthSlider = items.length * widthItem;
+    count -= widthItem * quantityScroll;
+    if (count < 0) {
+      count = widthSlider - widthItem * quantityScroll;
+    }
+    slider.current.style.transform = `translateX(${-count}px)`;
   };
 
   const renderFill = (quantity) => {
@@ -147,7 +167,11 @@ function Testimonial() {
           <div ref={slider} className="testi-slider-show">
             {dataTesti.map((item) => {
               return (
-                <div key={item.id} className="testi-slider-item">
+                <div
+                  key={item.id}
+                  className="testi-slider-item"
+                  ref={itemSlider}
+                >
                   <div className="wrapper-item">
                     <div className="testi-slider-item-star">
                       {renderFill(item.fill).map((itemStar) => (

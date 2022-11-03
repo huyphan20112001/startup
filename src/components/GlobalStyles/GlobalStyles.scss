@@ -80,3 +80,38 @@ img {
 .container-fluid {
   max-width: 100%;
 }
+
+@media screen and (max-width: 1180px) {
+  .container {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+}
+@media screen and (max-width: 1065px) {
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .container {
+    max-width: 870px;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+}
+@media screen and (max-width: 780px) {
+  .container {
+    padding: 0 3rem;
+  }
+}

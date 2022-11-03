@@ -33,3 +33,9 @@
     color: var(--features-desc);
   }
 }
+@media screen and (max-width: 780px) {
+  .footer-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
