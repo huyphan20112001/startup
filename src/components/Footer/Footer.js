@@ -1,54 +1,8 @@
 import "./Footer.scss";
-
 import React from "react";
+import { dataFooter } from "../../constants/constants";
 
 function Footer() {
-  const dataFooter = [
-    {
-      id: 1,
-      name: "About Us",
-      children: [
-        "Support Center",
-        "Customer Support",
-        "About Us",
-        "Copyright",
-        "Popular Campaign",
-      ],
-    },
-    {
-      id: 2,
-      name: "Out Information",
-      children: [
-        "Return Policy",
-        "Privacy Policy",
-        "Terms & Conditions",
-        "Site Map",
-        "Store Hours",
-      ],
-    },
-    {
-      id: 3,
-      name: "My Account",
-      children: [
-        "Press inquires",
-        "Social media",
-        "Directions",
-        "Images & B-roll",
-        "Permissions",
-      ],
-    },
-    {
-      id: 4,
-      name: "Policy",
-      children: [
-        "Application security",
-        "Software principles",
-        "Unwanted software policy",
-        "Responsible supply chain",
-      ],
-    },
-  ];
-
   return (
     <footer id="footer" className="footer">
       <div className="container">

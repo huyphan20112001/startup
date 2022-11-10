@@ -1,111 +1,10 @@
 import "./Testimonial.scss";
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
+import { dataTesti } from "../../constants/constants";
 
 function Testimonial() {
   const slider = useRef();
   const itemSlider = useRef();
-
-  const dataTesti = [
-    {
-      id: 1,
-      fill: 4,
-      title: "Modern look & trending design",
-      description:
-        "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
-      srcAvt:
-        "https://images.unsplash.com/photo-1657214059233-5626b35eb349?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80",
-      name: "Denny Hilguston",
-      username: "@denny.hil",
-    },
-    {
-      id: 2,
-      fill: 3,
-      title: "Modern look & trending design",
-      description:
-        "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
-      srcAvt:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-      name: "Denny Hilguston",
-      username: "@denny.hil",
-    },
-    {
-      id: 3,
-      fill: 5,
-      title: "Modern look & trending design",
-      description:
-        "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
-      srcAvt:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-      name: "Denny Hilguston",
-      username: "@denny.hil",
-    },
-    {
-      id: 4,
-      fill: 4,
-      title: "Modern look & trending design",
-      description:
-        "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
-      srcAvt:
-        "https://images.unsplash.com/photo-1513682121497-80211f36a7d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80",
-      name: "Denny Hilguston",
-      username: "@denny.hil",
-    },
-    {
-      id: 5,
-      fill: 5,
-      title: "Modern look & trending design",
-      description:
-        "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
-      srcAvt:
-        "https://images.unsplash.com/photo-1513682121497-80211f36a7d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80",
-      name: "Denny Hilguston",
-      username: "@denny.hil",
-    },
-    {
-      id: 6,
-      fill: 4,
-      title: "Modern look & trending design",
-      description:
-        "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
-      srcAvt:
-        "https://images.unsplash.com/photo-1513682121497-80211f36a7d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80",
-      name: "Denny Hilguston",
-      username: "@denny.hil",
-    },
-    {
-      id: 7,
-      fill: 2,
-      title: "Modern look & trending design",
-      description:
-        "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
-      srcAvt:
-        "https://images.unsplash.com/photo-1657214058744-7ff3b448c205?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80",
-      name: "Denny Hilguston",
-      username: "@denny.hil",
-    },
-    {
-      id: 8,
-      fill: 4,
-      title: "Modern look & trending design",
-      description:
-        "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
-      srcAvt:
-        "https://plus.unsplash.com/premium_photo-1664541336837-75c5f1bbdeb9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-      name: "Denny Hilguston",
-      username: "@denny.hil",
-    },
-    {
-      id: 9,
-      fill: 5,
-      title: "Modern look & trending design",
-      description:
-        "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
-      srcAvt:
-        "https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
-      name: "Denny Hilguston",
-      username: "@denny.hil",
-    },
-  ];
 
   let count = 0;
   const handleNext = () => {
@@ -116,7 +15,7 @@ function Testimonial() {
     const widthItem = items[0].offsetWidth;
     const quantityScroll = Math.round(widtScroll / widthItem);
     const widthSlider = items.length * widthItem;
-    console.log(widthSlider);
+    // console.log(widthSlider);
     count += widthItem * quantityScroll;
     if (count > widthSlider - widthItem * quantityScroll) {
       count = 0;
@@ -137,22 +36,28 @@ function Testimonial() {
     slider.current.style.transform = `translateX(${-count}px)`;
   };
 
-  const renderFill = (quantity) => {
-    let arr = [];
-    for (let i = 1; i <= 5; i++) {
-      if (i < quantity) {
-        arr.push({
-          id: i,
-          value: true,
-        });
-      } else
-        arr.push({
-          id: i,
-          value: false,
-        });
-    }
-    return arr;
-  };
+  // const renderFill = (quantity) => {
+  //   let arr = [];
+  //   for (let i = 1; i <= 5; i++) {
+  //     if (i < quantity) {
+  //       arr.push({
+  //         id: i,
+  //         value: true,
+  //       });
+  //     } else
+  //       arr.push({
+  //         id: i,
+  //         value: false,
+  //       });
+  //   }
+  //   return arr;
+  // };
+
+  const renderFill = (quantity) =>
+    [...Array(5).keys()].map((index) => ({
+      id: index,
+      value: index < quantity - 1,
+    }));
 
   return (
     <div id="testi" className="testi">
